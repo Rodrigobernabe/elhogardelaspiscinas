@@ -49,6 +49,8 @@ export default function Hero() {
           loop
           playsInline
           className="w-full h-full object-cover"
+          title="Fondo cinematográfico de agua cristalina en movimiento"
+          aria-hidden="true"
         >
           <source src="https://videos.pexels.com/video-files/3573964/3573964-hd_1920_1080_30fps.mp4" type="video/mp4" />
         </video>

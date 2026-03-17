@@ -110,8 +110,9 @@ export default function Intro() {
               {/* Main Image */}
               <img
                 src="/images/pools/intro-family.png"
-                alt="Familia disfrutando de su piscina"
+                alt="Familia feliz disfrutando de una piscina de diseño en su patio en Villa Mercedes"
                 className="w-full h-full object-cover"
+                loading="lazy"
               />
               
               {/* Overlay gradient */}
