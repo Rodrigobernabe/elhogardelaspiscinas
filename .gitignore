@@ -44,3 +44,5 @@ ENV/
 *.log
 dev.log
 server.log
+
+.vercel
