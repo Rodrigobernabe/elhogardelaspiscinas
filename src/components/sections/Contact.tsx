@@ -97,23 +97,7 @@ export default function Contact() {
             transition={{ delay: 0.2 }}
             className="relative"
           >
-            {/* Animated Border Glow */}
-            <motion.div
-              className="absolute -inset-1 rounded-3xl opacity-50"
-              animate={{
-                background: [
-                  'linear-gradient(45deg, oklch(0.6 0.15 195) 0%, oklch(0.5 0.12 180) 50%, oklch(0.55 0.14 200) 100%)',
-                  'linear-gradient(225deg, oklch(0.6 0.15 195) 0%, oklch(0.5 0.12 180) 50%, oklch(0.55 0.14 200) 100%)',
-                  'linear-gradient(45deg, oklch(0.6 0.15 195) 0%, oklch(0.5 0.12 180) 50%, oklch(0.55 0.14 200) 100%)',
-                ],
-              }}
-              transition={{
-                duration: 4,
-                repeat: Infinity,
-                ease: 'easeInOut',
-              }}
-              style={{ filter: 'blur(8px)' }}
-            />
+
 
             {/* Glass Card */}
             <div className="relative bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl sm:rounded-3xl p-5 sm:p-8 lg:p-12 shadow-2xl">
