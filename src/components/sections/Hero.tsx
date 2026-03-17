@@ -9,12 +9,12 @@ export default function Hero() {
   const containerRef = useRef<HTMLDivElement>(null)
   const videoRef = useRef<HTMLVideoElement>(null)
   const [titleVisible, setTitleVisible] = useState(false)
-  
+
   const { scrollYProgress } = useScroll({
     target: containerRef,
     offset: ['start start', 'end start']
   })
-  
+
   const y = useTransform(scrollYProgress, [0, 1], ['0%', '30%'])
   const opacity = useTransform(scrollYProgress, [0, 0.8], [1, 0])
   const scale = useTransform(scrollYProgress, [0, 0.5], [1, 1.1])
@@ -38,7 +38,7 @@ export default function Hero() {
       className="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden"
     >
       {/* Video Background - Full Immersive */}
-      <motion.div 
+      <motion.div
         className="absolute inset-0 z-0"
         style={{ scale }}
       >
@@ -54,13 +54,13 @@ export default function Hero() {
         >
           <source src="https://videos.pexels.com/video-files/3573964/3573964-hd_1920_1080_30fps.mp4" type="video/mp4" />
         </video>
-        
+
         {/* Cinematic Dark Overlay */}
         <div className="absolute inset-0 bg-gradient-to-b from-deep-blue/70 via-deep-blue/50 to-deep-blue/90" />
-        
+
         {/* Cyan Water Tint Overlay */}
         <div className="absolute inset-0 bg-gradient-to-br from-cyan-900/40 via-transparent to-cyan-800/30" />
-        
+
         {/* Vignette Effect */}
         <div className="absolute inset-0" style={{
           background: 'radial-gradient(ellipse at center, transparent 0%, oklch(0.12 0.02 240 / 0.6) 100%)'
@@ -130,33 +130,29 @@ export default function Hero() {
         </motion.p>
 
         {/* Main Headline with Split Text Reveal */}
-        <h1 className="mb-6 sm:mb-8">
-          <motion.span
-            className="block text-[1.7rem] sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-white leading-tight drop-shadow-2xl"
-            style={{ fontFamily: 'var(--font-display)' }}
-          >
+        <h1 className="mb-6 sm:mb-8 flex flex-col items-center">
+          <span className="block overflow-hidden py-1">
             <motion.span
-              className="inline-block overflow-hidden"
-              initial={{ clipPath: 'inset(0 100% 0 0)' }}
-              animate={titleVisible ? { clipPath: 'inset(0 0% 0 0)' } : {}}
+              className="block text-[1.7rem] sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-white leading-none drop-shadow-2xl"
+              style={{ fontFamily: 'var(--font-display)' }}
+              initial={{ y: '100%' }}
+              animate={titleVisible ? { y: '0%' } : { y: '100%' }}
               transition={{ duration: 1, ease: [0.77, 0, 0.175, 1], delay: 0.3 }}
             >
               Piscinas de Diseño en
             </motion.span>
-          </motion.span>
-          <motion.span
-            className="block text-[1.7rem] sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 via-cyan-400 to-white leading-tight drop-shadow-2xl"
-            style={{ fontFamily: 'var(--font-display)' }}
-          >
+          </span>
+          <span className="block overflow-hidden py-1">
             <motion.span
-              className="inline-block overflow-hidden"
-              initial={{ clipPath: 'inset(0 100% 0 0)' }}
-              animate={titleVisible ? { clipPath: 'inset(0 0% 0 0)' } : {}}
+              className="block text-[1.7rem] sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold leading-none drop-shadow-2xl text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 via-cyan-400 to-white"
+              style={{ fontFamily: 'var(--font-display)' }}
+              initial={{ y: '100%' }}
+              animate={titleVisible ? { y: '0%' } : { y: '100%' }}
               transition={{ duration: 1, ease: [0.77, 0, 0.175, 1], delay: 0.6 }}
             >
               Villa Mercedes.
             </motion.span>
-          </motion.span>
+          </span>
         </h1>
 
         {/* Subtitle */}
