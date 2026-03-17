@@ -116,7 +116,7 @@ export default function Contact() {
             />
 
             {/* Glass Card */}
-            <div className="relative bg-white/[0.03] backdrop-blur-2xl border border-white/10 rounded-2xl sm:rounded-3xl p-5 sm:p-8 lg:p-12 shadow-2xl">
+            <div className="relative bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl sm:rounded-3xl p-5 sm:p-8 lg:p-12 shadow-2xl">
               {/* Water Ripple Animation */}
               <div className="absolute inset-0 rounded-3xl overflow-hidden pointer-events-none">
                 {[...Array(5)].map((_, i) => (
