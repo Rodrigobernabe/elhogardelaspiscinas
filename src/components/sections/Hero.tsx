@@ -141,7 +141,7 @@ export default function Hero() {
               animate={titleVisible ? { clipPath: 'inset(0 0% 0 0)' } : {}}
               transition={{ duration: 1, ease: [0.77, 0, 0.175, 1], delay: 0.3 }}
             >
-              Tu propio oasis,
+              Piscinas de Diseño en
             </motion.span>
           </motion.span>
           <motion.span
@@ -154,7 +154,7 @@ export default function Hero() {
               animate={titleVisible ? { clipPath: 'inset(0 0% 0 0)' } : {}}
               transition={{ duration: 1, ease: [0.77, 0, 0.175, 1], delay: 0.6 }}
             >
-              sin salir de casa.
+              Villa Mercedes.
             </motion.span>
           </motion.span>
         </h1>
@@ -166,7 +166,7 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 1 }}
           className="text-white/90 text-base sm:text-lg md:text-xl lg:text-2xl max-w-3xl mx-auto mb-8 sm:mb-12 leading-relaxed drop-shadow-lg px-4"
         >
-          Diseñamos, instalamos y equipamos espacios de agua pensados para durar toda la vida.
+          Tu propio oasis sin salir de casa. Diseñamos, instalamos y equipamos espacios de agua pensados para durar toda la vida.
         </motion.p>
 
         {/* CTA Buttons */}
