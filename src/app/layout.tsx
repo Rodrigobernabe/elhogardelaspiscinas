@@ -14,24 +14,24 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Z.ai Code Scaffold - AI-Powered Development",
-  description: "Modern Next.js scaffold optimized for AI-powered development with Z.ai. Built with TypeScript, Tailwind CSS, and shadcn/ui.",
-  keywords: ["Z.ai", "Next.js", "TypeScript", "Tailwind CSS", "shadcn/ui", "AI development", "React"],
-  authors: [{ name: "Z.ai Team" }],
+  title: "El Hogar de las Piscinas | Diseño e Instalación en Villa Mercedes",
+  description: "Especialistas en la fabricación e instalación de piscinas de fibra de vidrio y hormigón. Calidad y durabilidad para tu hogar en Villa Mercedes, San Luis.",
+  keywords: ["Piscinas", "Villa Mercedes", "San Luis", "Instalación de piscinas", "Fibra de vidrio", "Hormigón", "Mantenimiento"],
+  authors: [{ name: "El Hogar de las Piscinas" }],
   icons: {
-    icon: "https://z-cdn.chatglm.cn/z-ai/static/logo.svg",
+    icon: "/favicon.ico",
   },
   openGraph: {
-    title: "Z.ai Code Scaffold",
-    description: "AI-powered development with modern React stack",
-    url: "https://chat.z.ai",
-    siteName: "Z.ai",
+    title: "El Hogar de las Piscinas",
+    description: "Tu propio oasis sin salir de casa",
+    url: "https://elhogardelaspiscinas.vercel.app",
+    siteName: "El Hogar de las Piscinas",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Z.ai Code Scaffold",
-    description: "AI-powered development with modern React stack",
+    title: "El Hogar de las Piscinas",
+    description: "Especialistas en piscinas en Villa Mercedes",
   },
 };
 

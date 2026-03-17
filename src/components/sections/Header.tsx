@@ -40,7 +40,7 @@ export default function Header() {
           : 'bg-transparent py-5'
       }`}
     >
-      <div className="container mx-auto px-4 lg:px-8">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <nav className="flex items-center justify-between">
           {/* Logo */}
           <motion.a
@@ -52,7 +52,7 @@ export default function Header() {
           >
             <Waves className="h-6 w-6 sm:h-8 sm:w-8 text-cyan-400 flex-shrink-0" />
             <div className="flex flex-col min-w-0">
-              <span className="text-base sm:text-lg md:text-xl font-bold tracking-tight truncate" style={{ fontFamily: 'var(--font-display)' }}>
+              <span className="text-sm xs:text-base sm:text-lg md:text-xl font-bold tracking-tight truncate" style={{ fontFamily: 'var(--font-display)' }}>
                 <span className="hidden sm:inline">El Hogar de las Piscinas</span>
                 <span className="sm:hidden">Piscinas VM</span>
               </span>

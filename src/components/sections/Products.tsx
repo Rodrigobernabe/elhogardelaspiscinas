@@ -122,19 +122,19 @@ function WaterEffectCard({ product }: { product: typeof products[0] }) {
 
           {/* Title */}
           <h3
-            className="text-2xl lg:text-3xl font-bold text-white mb-3"
+            className="text-2xl lg:text-3xl font-bold text-white mb-3 text-center lg:text-left"
             style={{ fontFamily: 'var(--font-display)' }}
           >
             {product.title}
           </h3>
 
           {/* Description */}
-          <p className="text-white/70 text-sm lg:text-base mb-4 line-clamp-2">
+          <p className="text-white/70 text-sm lg:text-base mb-4 line-clamp-2 text-center lg:text-left">
             {product.description}
           </p>
 
           {/* Features */}
-          <div className="flex flex-wrap gap-2 mb-4">
+          <div className="flex flex-wrap justify-center lg:justify-start gap-2 mb-4">
             {product.features.map((feature) => (
               <span
                 key={feature}
@@ -174,8 +174,8 @@ function WaterEffectCard({ product }: { product: typeof products[0] }) {
 
 export default function Products() {
   return (
-    <section id="modelos" className="relative py-24 lg:py-32 bg-gradient-to-b from-background via-deep-blue/5 to-background">
-      <div className="container mx-auto px-4 lg:px-8">
+    <section id="modelos" className="relative py-20 lg:py-32 bg-gradient-to-b from-background via-deep-blue/5 to-background">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
           <motion.div
@@ -214,7 +214,7 @@ export default function Products() {
         </div>
 
         {/* Products Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 lg:gap-8 max-w-sm sm:max-w-none mx-auto">
           {products.map((product) => (
             <WaterEffectCard key={product.id} product={product} />
           ))}

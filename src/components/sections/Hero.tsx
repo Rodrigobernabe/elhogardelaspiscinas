@@ -35,7 +35,7 @@ export default function Hero() {
   return (
     <section
       ref={containerRef}
-      className="relative h-screen min-h-[700px] flex items-center justify-center overflow-hidden"
+      className="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden"
     >
       {/* Video Background - Full Immersive */}
       <motion.div 
@@ -115,7 +115,7 @@ export default function Hero() {
       {/* Content */}
       <motion.div
         style={{ y, opacity }}
-        className="relative z-20 container mx-auto px-4 text-center"
+        className="relative z-20 container mx-auto px-5 sm:px-6 text-center"
       >
         {/* Micro-copy */}
         <motion.p
@@ -128,9 +128,9 @@ export default function Hero() {
         </motion.p>
 
         {/* Main Headline with Split Text Reveal */}
-        <h1 className="mb-6 sm:mb-8 px-2">
+        <h1 className="mb-6 sm:mb-8">
           <motion.span
-            className="block text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-white leading-tight drop-shadow-2xl"
+            className="block text-[1.7rem] sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-white leading-tight drop-shadow-2xl"
             style={{ fontFamily: 'var(--font-display)' }}
           >
             <motion.span
@@ -143,7 +143,7 @@ export default function Hero() {
             </motion.span>
           </motion.span>
           <motion.span
-            className="block text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 via-cyan-400 to-white leading-tight drop-shadow-2xl"
+            className="block text-[1.7rem] sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 via-cyan-400 to-white leading-tight drop-shadow-2xl"
             style={{ fontFamily: 'var(--font-display)' }}
           >
             <motion.span

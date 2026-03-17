@@ -39,8 +39,8 @@ export default function Process() {
   const lineHeight = useTransform(scrollYProgress, [0, 1], ['0%', '100%'])
 
   return (
-    <section id="proceso" className="relative py-24 lg:py-32 overflow-hidden">
-      <div className="container mx-auto px-4 lg:px-8">
+    <section id="proceso" className="relative py-20 lg:py-32 overflow-hidden">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16 lg:mb-24">
           <motion.div
@@ -95,13 +95,13 @@ export default function Process() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: '-100px' }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className={`relative flex flex-col lg:flex-row items-center gap-8 ${
+                className={`relative flex flex-col items-center lg:flex-row gap-6 lg:gap-8 ${
                   index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'
                 }`}
               >
                 {/* Content */}
-                <div className={`flex-1 ${index % 2 === 0 ? 'lg:text-right' : 'lg:text-left'}`}>
-                  <div className={`bg-card border border-border rounded-2xl p-5 sm:p-6 lg:p-8 shadow-lg hover:shadow-xl transition-shadow ${index % 2 === 0 ? 'lg:ml-auto lg:max-w-md' : 'lg:mr-auto lg:max-w-md'}`}>
+                <div className={`flex-1 w-full text-center ${index % 2 === 0 ? 'lg:text-right' : 'lg:text-left'}`}>
+                  <div className={`bg-card border border-border rounded-2xl p-6 sm:p-8 shadow-lg hover:shadow-xl transition-shadow w-full mx-auto lg:mx-0 lg:max-w-md ${index % 2 === 0 ? 'lg:ml-auto' : 'lg:mr-auto'}`}>
                     <span
                       className="text-5xl sm:text-6xl lg:text-7xl font-bold text-cyan-500/20 mb-4 block"
                       style={{ fontFamily: 'var(--font-display)' }}

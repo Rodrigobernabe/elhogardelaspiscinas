@@ -25,9 +25,9 @@ export default function Intro() {
     <section
       ref={containerRef}
       id="nosotros"
-      className="relative py-24 lg:py-32 overflow-hidden"
+      className="relative py-20 lg:py-32 overflow-hidden"
     >
-      <div className="container mx-auto px-4 lg:px-8">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Text Content */}
           <motion.div
@@ -35,7 +35,7 @@ export default function Intro() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="order-2 lg:order-1"
+            className="order-2 lg:order-1 text-center lg:text-left flex flex-col items-center lg:items-start"
           >
             {/* Badge */}
             <motion.div
@@ -81,7 +81,7 @@ export default function Intro() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.5 }}
-              className="flex flex-wrap gap-4"
+              className="flex flex-wrap gap-4 justify-center lg:justify-start"
             >
               {features.map((feature, index) => (
                 <div
@@ -127,13 +127,13 @@ export default function Intro() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.6 }}
-              className="absolute -bottom-4 left-2 sm:-bottom-6 sm:-left-6 lg:-left-12 glass rounded-xl p-3 sm:p-4 shadow-xl max-w-[160px] sm:max-w-[200px]"
+              className="absolute -bottom-6 left-1/2 -translate-x-1/2 sm:translate-x-0 sm:left-auto sm:-bottom-6 sm:-left-6 lg:-left-12 glass rounded-xl p-3 sm:p-4 shadow-xl w-[90%] sm:w-auto max-w-[280px] sm:max-w-[200px]"
             >
-              <div className="flex items-center gap-2 sm:gap-3">
+              <div className="flex items-center justify-center sm:justify-start gap-2 sm:gap-3">
                 <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-gradient-to-br from-cyan-400 to-cyan-600 flex items-center justify-center flex-shrink-0">
                   <span className="text-xl sm:text-2xl">🌊</span>
                 </div>
-                <div>
+                <div className="text-center sm:text-left">
                   <p className="text-white font-bold text-base sm:text-lg">500+</p>
                   <p className="text-white/60 text-[10px] sm:text-xs">Piscinas instaladas</p>
                 </div>

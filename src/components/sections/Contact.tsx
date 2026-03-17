@@ -45,7 +45,7 @@ export default function Contact() {
   }
 
   return (
-    <section id="contacto" className="relative py-24 lg:py-32 overflow-hidden">
+    <section id="contacto" className="relative py-20 lg:py-32 overflow-hidden">
       {/* Video Background */}
       <div className="absolute inset-0">
         <video
@@ -61,10 +61,10 @@ export default function Contact() {
         <div className="absolute inset-0 bg-deep-blue/60 sm:bg-deep-blue/50" />
       </div>
 
-      <div className="container mx-auto px-4 lg:px-8 relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-4xl mx-auto">
           {/* Header */}
-          <div className="text-center mb-12">
+          <div className="text-center mb-10 sm:mb-12">
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -116,7 +116,7 @@ export default function Contact() {
             />
 
             {/* Glass Card */}
-            <div className="relative bg-white/[0.03] backdrop-blur-2xl border border-white/10 rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-12 shadow-2xl">
+            <div className="relative bg-white/[0.03] backdrop-blur-2xl border border-white/10 rounded-2xl sm:rounded-3xl p-5 sm:p-8 lg:p-12 shadow-2xl">
               {/* Water Ripple Animation */}
               <div className="absolute inset-0 rounded-3xl overflow-hidden pointer-events-none">
                 {[...Array(5)].map((_, i) => (

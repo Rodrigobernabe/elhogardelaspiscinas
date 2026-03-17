@@ -118,8 +118,8 @@ export default function Projects() {
   }
 
   return (
-    <section className="relative py-24 lg:py-32 bg-gradient-to-b from-background to-deep-blue/5 overflow-hidden">
-      <div className="container mx-auto px-4 lg:px-8 mb-12">
+    <section className="relative py-20 lg:py-32 bg-gradient-to-b from-background to-deep-blue/5 overflow-hidden">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 mb-12">
         {/* Section Header */}
         <div className="text-center">
           <motion.div
@@ -181,7 +181,7 @@ export default function Projects() {
         {/* Cards Container */}
         <div
           ref={containerRef}
-          className="flex gap-6 overflow-x-auto snap-x snap-mandatory scrollbar-hide px-4 lg:px-16 py-4"
+          className="flex gap-4 sm:gap-6 overflow-x-auto snap-x snap-mandatory scrollbar-hide px-4 sm:px-8 lg:px-16 py-4"
           style={{
             scrollbarWidth: 'none',
             msOverflowStyle: 'none'
@@ -194,7 +194,7 @@ export default function Projects() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="flex-shrink-0 w-[90vw] sm:w-[85vw] md:w-[60vw] lg:w-[40vw] snap-center"
+              className="flex-shrink-0 w-[85vw] xs:w-[82vw] sm:w-[75vw] md:w-[60vw] lg:w-[40vw] snap-center"
             >
               <div className="relative aspect-[4/3] rounded-2xl overflow-hidden group">
                 {/* Image */}

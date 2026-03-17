@@ -36,11 +36,11 @@ export default function Footer() {
       <div className="absolute top-0 left-1/4 w-96 h-96 bg-cyan-600/5 rounded-full blur-3xl" />
       <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-amber-600/5 rounded-full blur-3xl" />
 
-      <div className="container mx-auto px-4 lg:px-8 relative z-10">
+      <div className="container mx-auto px-5 sm:px-6 lg:px-8 relative z-10">
         {/* Main Footer Content */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-12 mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-12 mb-12 text-center sm:text-left">
           {/* Brand Column */}
-          <div className="sm:col-span-2 lg:col-span-1">
+          <div className="sm:col-span-2 lg:col-span-1 flex flex-col items-center sm:items-start">
             <a href="#" className="flex items-center gap-2 mb-4">
               <Waves className="h-7 w-7 sm:h-8 sm:w-8 text-cyan-500" />
               <div className="flex flex-col">
@@ -119,19 +119,19 @@ export default function Footer() {
           </div>
 
           {/* Contact Info */}
-          <div>
+          <div className="flex flex-col items-center sm:items-start">
             <h4 className="text-slate-200 font-semibold mb-4" style={{ fontFamily: 'var(--font-display)' }}>
               Contacto
             </h4>
-            <ul className="space-y-4">
-              <li className="flex items-start gap-3">
-                <MapPin className="w-5 h-5 text-cyan-500 flex-shrink-0 mt-0.5" />
+            <ul className="space-y-4 w-full">
+              <li className="flex flex-col sm:flex-row items-center sm:items-start gap-2 sm:gap-3">
+                <MapPin className="w-5 h-5 text-cyan-500 flex-shrink-0" />
                 <span className="text-slate-400 text-sm">
                   Av. Principal 1234<br />
                   Villa Mercedes, San Luis
                 </span>
               </li>
-              <li className="flex items-center gap-3">
+              <li className="flex flex-col sm:flex-row items-center sm:items-start gap-2 sm:gap-3">
                 <Phone className="w-5 h-5 text-cyan-500 flex-shrink-0" />
                 <a
                   href="tel:+5492657123456"
@@ -140,7 +140,7 @@ export default function Footer() {
                   +54 9 2657 12-3456
                 </a>
               </li>
-              <li className="flex items-center gap-3">
+              <li className="flex flex-col sm:flex-row items-center sm:items-start gap-2 sm:gap-3">
                 <Mail className="w-5 h-5 text-cyan-500 flex-shrink-0" />
                 <a
                   href="mailto:info@hogarpiscinas.com"
@@ -149,7 +149,7 @@ export default function Footer() {
                   info@hogarpiscinas.com
                 </a>
               </li>
-              <li className="flex items-center gap-3">
+              <li className="flex flex-col sm:flex-row items-center sm:items-start gap-2 sm:gap-3">
                 <Clock className="w-5 h-5 text-cyan-500 flex-shrink-0" />
                 <span className="text-slate-400 text-sm">
                   Lun - Sáb: 8:00 - 18:00
