@@ -34,45 +34,71 @@ export default function BrandsMarquee() {
       {/* Marquee Container */}
       <div className="relative overflow-hidden">
         {/* Gradient Fades */}
-        <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-background to-transparent z-10" />
-        <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-background to-transparent z-10" />
+        <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-background to-transparent z-20" />
+        <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-background to-transparent z-20" />
 
         {/* First Row */}
-        <div className="flex w-max animate-marquee">
-          {[...brands, ...brands].map((brand, index) => (
-            <div
-              key={`${brand.name}-${index}`}
-              className="flex-shrink-0 mx-4 sm:mx-8 lg:mx-12 group cursor-pointer"
-            >
-              <div className="relative px-4 sm:px-6 py-3 sm:py-4 rounded-lg transition-all duration-300 group-hover:bg-cyan-500/10">
-                <span
-                  className="text-xl sm:text-2xl lg:text-3xl font-bold tracking-wider text-muted-foreground/40 group-hover:text-cyan-400 transition-colors duration-300"
-                  style={{ fontFamily: 'var(--font-display)' }}
-                >
-                  {brand.logo}
-                </span>
+        <div className="flex overflow-hidden py-4">
+          <motion.div 
+            className="flex w-max"
+            animate={{ x: [0, '-50%'] }}
+            transition={{
+              x: {
+                repeat: Infinity,
+                repeatType: "loop",
+                duration: 40,
+                ease: "linear",
+              },
+            }}
+          >
+            {[...brands, ...brands, ...brands, ...brands].map((brand, index) => (
+              <div
+                key={`${brand.name}-${index}`}
+                className="flex-shrink-0 mx-4 sm:mx-8 lg:mx-12 group cursor-pointer"
+              >
+                <div className="relative px-4 sm:px-6 py-3 sm:py-4 rounded-lg transition-all duration-300 group-hover:bg-cyan-500/10">
+                  <span
+                    className="text-xl sm:text-2xl lg:text-3xl font-bold tracking-wider text-muted-foreground/40 group-hover:text-cyan-400 transition-colors duration-300"
+                    style={{ fontFamily: 'var(--font-display)' }}
+                  >
+                    {brand.logo}
+                  </span>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </motion.div>
         </div>
 
         {/* Second Row (Reverse) */}
-        <div className="flex w-max animate-marquee mt-3 sm:mt-4" style={{ animationDirection: 'reverse' }}>
-          {[...brands, ...brands].reverse().map((brand, index) => (
-            <div
-              key={`${brand.name}-reverse-${index}`}
-              className="flex-shrink-0 mx-4 sm:mx-8 lg:mx-12 group cursor-pointer"
-            >
-              <div className="relative px-4 sm:px-6 py-3 sm:py-4 rounded-lg transition-all duration-300 group-hover:bg-cyan-500/10">
-                <span
-                  className="text-xl sm:text-2xl lg:text-3xl font-bold tracking-wider text-muted-foreground/30 group-hover:text-cyan-400 transition-colors duration-300"
-                  style={{ fontFamily: 'var(--font-display)' }}
-                >
-                  {brand.logo}
-                </span>
+        <div className="flex overflow-hidden py-4 mt-2">
+          <motion.div 
+            className="flex w-max"
+            animate={{ x: ['-50%', 0] }}
+            transition={{
+              x: {
+                repeat: Infinity,
+                repeatType: "loop",
+                duration: 50,
+                ease: "linear",
+              },
+            }}
+          >
+            {[...brands, ...brands, ...brands, ...brands].map((brand, index) => (
+              <div
+                key={`${brand.name}-reverse-${index}`}
+                className="flex-shrink-0 mx-4 sm:mx-8 lg:mx-12 group cursor-pointer"
+              >
+                <div className="relative px-4 sm:px-6 py-3 sm:py-4 rounded-lg transition-all duration-300 group-hover:bg-cyan-500/10">
+                  <span
+                    className="text-xl sm:text-2xl lg:text-3xl font-bold tracking-wider text-muted-foreground/30 group-hover:text-cyan-400 transition-colors duration-300"
+                    style={{ fontFamily: 'var(--font-display)' }}
+                  >
+                    {brand.logo}
+                  </span>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </motion.div>
         </div>
       </div>
 

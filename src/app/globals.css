@@ -287,12 +287,6 @@
     animation: progress-fill 2s ease-out forwards;
   }
 
-  .animate-marquee {
-    display: flex;
-    width: max-content;
-    animation: marquee 40s linear infinite;
-  }
-
   .animate-glow {
     animation: glow-pulse 2s ease-in-out infinite;
   }
