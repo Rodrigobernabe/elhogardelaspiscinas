@@ -38,7 +38,7 @@ export default function BrandsMarquee() {
         <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-background to-transparent z-10" />
 
         {/* First Row */}
-        <div className="flex animate-marquee">
+        <div className="flex w-max animate-marquee">
           {[...brands, ...brands].map((brand, index) => (
             <div
               key={`${brand.name}-${index}`}
@@ -57,7 +57,7 @@ export default function BrandsMarquee() {
         </div>
 
         {/* Second Row (Reverse) */}
-        <div className="flex animate-marquee mt-3 sm:mt-4" style={{ animationDirection: 'reverse' }}>
+        <div className="flex w-max animate-marquee mt-3 sm:mt-4" style={{ animationDirection: 'reverse' }}>
           {[...brands, ...brands].reverse().map((brand, index) => (
             <div
               key={`${brand.name}-reverse-${index}`}

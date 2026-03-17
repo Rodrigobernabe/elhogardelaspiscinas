@@ -251,48 +251,51 @@
   50% { box-shadow: 0 0 40px oklch(0.65 0.18 195 / 0.6); }
 }
 
-/* Animation Utilities */
-.animate-float {
-  animation: float 6s ease-in-out infinite;
-}
+@layer utilities {
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
 
-.animate-shimmer {
-  background: linear-gradient(90deg, transparent, oklch(1 0 0 / 0.3), transparent);
-  background-size: 200% 100%;
-  animation: shimmer 2s infinite;
-}
+  .animate-shimmer {
+    background: linear-gradient(90deg, transparent, oklch(1 0 0 / 0.3), transparent);
+    background-size: 200% 100%;
+    animation: shimmer 2s infinite;
+  }
 
-.animate-ripple {
-  animation: ripple 0.6s ease-out;
-}
+  .animate-ripple {
+    animation: ripple 0.6s ease-out;
+  }
 
-.animate-wave {
-  animation: wave 3s ease-in-out infinite;
-}
+  .animate-wave {
+    animation: wave 3s ease-in-out infinite;
+  }
 
-.animate-gradient {
-  background-size: 200% 200%;
-  animation: gradient-shift 4s ease infinite;
-}
+  .animate-gradient {
+    background-size: 200% 200%;
+    animation: gradient-shift 4s ease infinite;
+  }
 
-.animate-split-reveal {
-  animation: split-text-reveal 1s cubic-bezier(0.77, 0, 0.175, 1) forwards;
-}
+  .animate-split-reveal {
+    animation: split-text-reveal 1s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+  }
 
-.animate-fade-up {
-  animation: fade-up 0.8s ease-out forwards;
-}
+  .animate-fade-up {
+    animation: fade-up 0.8s ease-out forwards;
+  }
 
-.animate-progress {
-  animation: progress-fill 2s ease-out forwards;
-}
+  .animate-progress {
+    animation: progress-fill 2s ease-out forwards;
+  }
 
-.animate-marquee {
-  animation: marquee 30s linear infinite;
-}
+  .animate-marquee {
+    display: flex;
+    width: max-content;
+    animation: marquee 40s linear infinite;
+  }
 
-.animate-glow {
-  animation: glow-pulse 2s ease-in-out infinite;
+  .animate-glow {
+    animation: glow-pulse 2s ease-in-out infinite;
+  }
 }
 
 /* Glassmorphism */
